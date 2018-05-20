@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+
+</head>
+<body>
+
+    <input type="text" id="tekstbalk" autocomplete="off" value="cuck">
+    <button style="width: 100px; height: 100px;">Send</button>
+
+    <script>
+            var socket = io();
+            $('button').on("click", function(){
+                console.log("cuck");
+                var text = document.getElementById('tekstbalk').value;
+
+                    var split = Array.from(text);
+                socket.emit('chat message', text);
+                console.log(split);
+
+                return false;
+            });
+
+    </script>
+
+</body>
+</html>
