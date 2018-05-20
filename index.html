@@ -4,40 +4,47 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-
+    <script src="node_modules\morse\morse.js"></script>
 
 </head>
 <body>
 
-    <input type="text" id="tekstbalk" autocomplete="off" value="cuck">
-    <button style="width: 100px; height: 100px;">Send</button>
+<input type="text" id="tekstbalk" autocomplete="off" value="cuck">
+<button style="width: 100px; height: 100px;">Send morse</button>
 
-    <script>
-            var socket = io();
-            $('button').on("click", function(){
-                console.log("cuck");
-                var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
+<script>
+  //  var socket = io();
+ // var morse = require('morse');
+//morse code conversie staat op app.js
+ // var encoded = morse.encode('Hello, world.');
+ // alert(encoded);
+    $('button').on("click", function(){
+        console.log("cuck");
+        var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
+        var letters = /^[A-Za-z\s]+$/; //variabele met letters, hoofdletters en spaties
+        if(text.match(letters)) { //kijk of er alleen letters en spaties in de var text zitten
+            alert("letters alleen")
+        } else {
+            alert("wat hey dat kan niet")
+        }
 
-                var split = Array.from(text); //maak een array van de var text
-                socket.emit('chat message', text); //stuur het in de socket
-                console.log(split);
-                for(i=0; i < text.length; i++) { //voer het zovaak uit als dat de array groot is
-                   var lees =  split[i];
-                   if(lees == "c") {
-                       console.log("nice");
-                   } else if (lees == "u") {
-                       console.log("U2");
-                   } else {
-                       console.log("haha");
-                   }
-                   }
+        var split = Array.from(text); //maak een array van de var text
+      //  socket.emit('chat message', text); //stuur het in de socket
+        console.log(split);
+        for(i=0; i < text.length; i++) { //voer het zovaak uit als dat de array groot is
+            var lees =  split[i];
+            if(lees == "c" || lees == "C") {
+                console.log("nice");
+            } else if (lees == "u") {
+                console.log("U2");
+            } else {
+                console.log("haha");
+            }
+        }
+        return false;
+    });
 
-
-
-                return false;
-            });
-
-    </script>
+</script>
 
 </body>
 </html>

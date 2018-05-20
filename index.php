@@ -23,7 +23,7 @@
                 console.log(split);
                 for(i=0; i < text.length; i++) { //voer het zovaak uit als dat de array groot is
                    var lees =  split[i];
-                   if(lees == "c") {
+                   if(lees == "c" || lees == "C") {
                        console.log("nice");
                    } else if (lees == "u") {
                        console.log("U2");

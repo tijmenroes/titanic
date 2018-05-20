@@ -6,12 +6,17 @@ var five = require("johnny-five");
 
 var temporal = require("temporal");
 
+var morse = require('morse');
+
+//mogelijk iets om te doen. Decode het op app.js en gooi alles in 1 string. Daarna ga je met een loop de string af per letter en waar een . of - is zal die iets moeten uitvoeren.
+//daarna word een timer doorgestuurd naar de index
+
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.php');
+    res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection', function(socket){
