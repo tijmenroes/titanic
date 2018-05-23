@@ -4,7 +4,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="node_modules\morse\morse.js"></script>
+
 
 </head>
 <body>
@@ -13,19 +13,62 @@
 <button style="width: 100px; height: 100px;">Send morse</button>
 
 <script>
-  //  var socket = io();
+    var patternMap = {
+        "morse":[
+             {".-" : "A"},
+              {"-..." : "B"},
+            {"-.-.": "C"},
+            { "-..": "D"},
+            {".": "E"},
+            {"..-.": "F"},
+            {"--.": "G"},
+            {"....": "H"},
+            {"..": "I"},
+            {".---": "J"},
+            {"-.-": "K"},
+            {".-..": "L"},
+            {"--": "M"},
+            {"-.": "N"},
+            {"---": "O"},
+            {".--.": "P"},
+            {"--.-": "Q"},
+            {".-.": "R"},
+            {"...": "S"},
+            {"-": "T"},
+            {"..-": "U"},
+            {"...-": "V"},
+            {".--": "W"},
+            {"-..-": "X"},
+            {"-.--": "Y"},
+            {"--..": "Z"},
+            {"-----": "0"},
+            {".----": "1"},
+            {"..---": "2"},
+            {"...--": "3"},
+            {"....-": "4"},
+            {".....": "5"},
+            {"-....": "6"},
+            {"--...": "7"},
+            {"---..": "8"},
+            {"----.": "9"}]
+
+    };
+
+    //  var socket = io();
  // var morse = require('morse');
 //morse code conversie staat op app.js
  // var encoded = morse.encode('Hello, world.');
  // alert(encoded);
+  var poep = [];
+ console.log(patternMap.morse[35]);
     $('button').on("click", function(){
-        console.log("cuck");
+
         var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
         var letters = /^[A-Za-z\s]+$/; //variabele met letters, hoofdletters en spaties
         if(text.match(letters)) { //kijk of er alleen letters en spaties in de var text zitten
-            alert("letters alleen")
+            alert("letters alleen");
         } else {
-            alert("wat hey dat kan niet")
+            alert("wat hey dat kan niet");
         }
 
         var split = Array.from(text); //maak een array van de var text
@@ -33,16 +76,25 @@
         console.log(split);
         for(i=0; i < text.length; i++) { //voer het zovaak uit als dat de array groot is
             var lees =  split[i];
-            if(lees == "c" || lees == "C") {
-                console.log("nice");
-            } else if (lees == "u") {
-                console.log("U2");
-            } else {
-                console.log("haha");
+            lees = lees.toUpperCase();
+            for(y=0; y< 34; i++) { //ga de hele patternmap array af
+                console.log(patternMap.morse[y][1]);
+                
+                if (patternMap.morse[y][1] == lees ) {
+
+
+                    poep += patternMap.morse[y][0].toString();
+                }
+
             }
+
         }
+        console.log(poep);
         return false;
     });
+
+
+    //array wittewel
 
 </script>
 
