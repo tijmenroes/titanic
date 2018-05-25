@@ -10,14 +10,15 @@
 <body>
 
 <input type="text" id="tekstbalk" autocomplete="off" value="cuck">
-<button style="width: 100px; height: 100px;">Send morse</button>
+<button style="width: 100px; height: 100px;">Send morse!</button>
 
 <script>
     var patternMap = {
         "morse":[
-             {".-" : "A"},
-              {"-..." : "B"},
-            {"-.-.": "C"},
+             ".-", "-...",  "..."],
+        "letters": [
+              "A", "B", "C" ]
+       /*     {"-.-.": "C"},
             { "-..": "D"},
             {".": "E"},
             {"..-.": "F"},
@@ -50,7 +51,7 @@
             {"-....": "6"},
             {"--...": "7"},
             {"---..": "8"},
-            {"----.": "9"}]
+            {"----.": "9"}]*/
 
     };
 
@@ -60,36 +61,48 @@
  // var encoded = morse.encode('Hello, world.');
  // alert(encoded);
   var poep = [];
- console.log(patternMap.morse[35]);
+  var cuck = "A";
+var lees = "lol";
+var a = patternMap.letters.indexOf(cuck);
+
+  console.log(a);
+    console.log(patternMap.morse[a]);
+
+ console.log(patternMap.morse[1]);
+    for (y = -1; y < 1; y++) { //ga de hele patternmap array af
+        console.log("kys");
+        var console1 = patternMap.morse[1];
+        if (console1 == lees) {
+            console.log(console1 + " YAAAAA");
+        } else {
+            console.log("lol");
+        }
+    }
     $('button').on("click", function(){
 
         var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
         var letters = /^[A-Za-z\s]+$/; //variabele met letters, hoofdletters en spaties
         if(text.match(letters)) { //kijk of er alleen letters en spaties in de var text zitten
-            alert("letters alleen");
+           // alert("letters alleen");
         } else {
-            alert("wat hey dat kan niet");
+           // alert("wat hey dat kan niet");
         }
 
         var split = Array.from(text); //maak een array van de var text
       //  socket.emit('chat message', text); //stuur het in de socket
         console.log(split);
         for(i=0; i < text.length; i++) { //voer het zovaak uit als dat de array groot is
-            var lees =  split[i];
+            var lees = split[i];
             lees = lees.toUpperCase();
-            for(y=0; y< 34; i++) { //ga de hele patternmap array af
-                console.log(patternMap.morse[y][1]);
-                
-                if (patternMap.morse[y][1] == lees ) {
+            console.log(lees);
+               //ga de hele patternmap array af
+                  var a = patternMap.letters.indexOf(lees);
+                  console.log(a);
+                   console.log(patternMap.morse[a]);
 
+}
 
-                    poep += patternMap.morse[y][0].toString();
-                }
-
-            }
-
-        }
-        console.log(poep);
+       // console.log(poep);
         return false;
     });
 
