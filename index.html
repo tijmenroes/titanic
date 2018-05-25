@@ -15,71 +15,20 @@
 <script>
     var patternMap = {
         "morse":[
-             ".-", "-...",  "..."],
+            ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---","-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-",
+            "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", " "],
         "letters": [
-              "A", "B", "C" ]
-       /*     {"-.-.": "C"},
-            { "-..": "D"},
-            {".": "E"},
-            {"..-.": "F"},
-            {"--.": "G"},
-            {"....": "H"},
-            {"..": "I"},
-            {".---": "J"},
-            {"-.-": "K"},
-            {".-..": "L"},
-            {"--": "M"},
-            {"-.": "N"},
-            {"---": "O"},
-            {".--.": "P"},
-            {"--.-": "Q"},
-            {".-.": "R"},
-            {"...": "S"},
-            {"-": "T"},
-            {"..-": "U"},
-            {"...-": "V"},
-            {".--": "W"},
-            {"-..-": "X"},
-            {"-.--": "Y"},
-            {"--..": "Z"},
-            {"-----": "0"},
-            {".----": "1"},
-            {"..---": "2"},
-            {"...--": "3"},
-            {"....-": "4"},
-            {".....": "5"},
-            {"-....": "6"},
-            {"--...": "7"},
-            {"---..": "8"},
-            {"----.": "9"}]*/
+              "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3"
+        , "4", "5", "6", "7", "8", "9", "0", " "]};
 
-    };
 
     //  var socket = io();
  // var morse = require('morse');
 //morse code conversie staat op app.js
  // var encoded = morse.encode('Hello, world.');
  // alert(encoded);
-  var poep = [];
-  var cuck = "A";
-var lees = "lol";
-var a = patternMap.letters.indexOf(cuck);
-
-  console.log(a);
-    console.log(patternMap.morse[a]);
-
- console.log(patternMap.morse[1]);
-    for (y = -1; y < 1; y++) { //ga de hele patternmap array af
-        console.log("kys");
-        var console1 = patternMap.morse[1];
-        if (console1 == lees) {
-            console.log(console1 + " YAAAAA");
-        } else {
-            console.log("lol");
-        }
-    }
     $('button').on("click", function(){
-
+        var poep = [];//set de var hier zodat hij elke buttonclick ook weer leeg gemaakt word
         var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
         var letters = /^[A-Za-z\s]+$/; //variabele met letters, hoofdletters en spaties
         if(text.match(letters)) { //kijk of er alleen letters en spaties in de var text zitten
@@ -92,16 +41,27 @@ var a = patternMap.letters.indexOf(cuck);
       //  socket.emit('chat message', text); //stuur het in de socket
         console.log(split);
         for(i=0; i < text.length; i++) { //voer het zovaak uit als dat de array groot is
-            var lees = split[i];
-            lees = lees.toUpperCase();
+            var lees = split[i]; //kijk per letter
+            lees = lees.toUpperCase(); //maak letters hoofdletters
             console.log(lees);
-               //ga de hele patternmap array af
-                  var a = patternMap.letters.indexOf(lees);
-                  console.log(a);
-                   console.log(patternMap.morse[a]);
-
+                  var a = patternMap.letters.indexOf(lees); //kijk welke positie de bepaalde letter heeft in de array
+               //   console.log(a);
+                 //  console.log(patternMap.morse[a]);
+                   poep.push(patternMap.morse[a]); //stop de morse voor de bijbehordende letter in de array
 }
 
+        var morseMix = poep.join(""); //zet het om naar een string
+        console.log(morseMix);
+        alert(morseMix);
+       for(z=0; z < morseMix.length; z++) { //for loop die de morsemix afgaat en kijkt of het een punt, streepje of spatie is.
+            if(morseMix[z] == "." || morseMix[z] == " ") {
+                console.log("1 sec");
+            } else if(morseMix[z] == "-") {
+                console.log("2 sec");
+           } else {
+                console.log("nee");
+            }
+        }
        // console.log(poep);
         return false;
     });
