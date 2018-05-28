@@ -1,9 +1,11 @@
+
 <html>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
 
 </head>
 <body>
@@ -17,98 +19,133 @@
             ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---","-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-",
             "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", " "],
         "letters": [
-              "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3"
-        , "4", "5", "6", "7", "8", "9", "0", " "]};
-    var fullMorse = {};
-    fullMorse.wel =0;
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3"
+            , "4", "5", "6", "7", "8", "9", "0", " "]};
 
-    fullMorse.value = "5";
-    console.log(fullMorse);
+
     //  var socket = io();
- // var morse = require('morse');
-//morse code conversie staat op app.js
- // var encoded = morse.encode('Hello, world.');
- // alert(encoded);
-
-    var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
-    var letters = /^[A-Za-z0-9\s]+$/; //variabele met letters, hoofdletters en spaties
-
-    var time = 0.5;
-    var short = time* 3;
-    var long = time * 7;
-
+    // var morse = require('morse');
+    //morse code conversie staat op app.js
+    // var encoded = morse.encode('Hello, world.');
+    // alert(encoded);
     $('button').on("click", function(){
         var poep = [];//set de var hier zodat hij elke buttonclick ook weer leeg gemaakt word
-
+        var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
+        var letters = /^[A-Za-z\s]+$/; //variabele met letters, hoofdletters en spaties
         if(text.match(letters)) { //kijk of er alleen letters en spaties in de var text zitten
-            var split = Array.from(text); //maak een array van de var text
-            //  socket.emit('chat message', text); //stuur het in de socket
-            console.log(split);
-            for(i=0; i < text.length; i++) { //voer het zovaak uit als dat de array groot is
-                var lees = split[i]; //kijk per letter
-                lees = lees.toUpperCase(); //maak letters hoofdletters
-                console.log(lees);
-                var a = patternMap.letters.indexOf(lees); //kijk welke positie de bepaalde letter heeft in de letter array
-                //   console.log(a);
-                //  console.log(patternMap.morse[a]);
-                poep.push(patternMap.morse[a]); //stop de morse voor de bijbehordende letter in de array
-            }
+            // alert("letters alleen");
 
-            var morseMix = poep.join(""); //zet het om naar een string
-            console.log(morseMix);
-            alert(morseMix);
+} else {
+// alert("wat hey dat kan niet");
+}
 
-            var fullMorse = [];
-            var row = {};
+        var time = 0.5;
+        var short = time * 3;
+        var long = time * 7;
 
-            for(z=0; z < morseMix.length; z++) { //for loop die de morsemix afgaat en kijkt of het een punt, streepje of spatie is.
-                //dit zou later in de bovenstaande loop gezet kunnen worden maar is voor duidelijkheid hier geplaatst.
-                if(morseMix[z] == "." || morseMix[z] == " ") {
-                    //warning: tussen LETTERS komt ook tijd dus het moet in de andere loop
-                    //idee om te kijken of het licht moet schijnen:
-                    // array is dan ["wel" : 0.5, "niet" : 1.5"]
+var split = Array.from(text); //maak een array van de var text
 
-                   row.on = true;
-                    row.val = time;
-                    console.log("WAT MAN");
-                  /*  if(morseMix[z +1] == "." || morseMix[z +1] == "-"){
-                        row.on = false;
-                        row.val = time;
-                    } else { //anders is het een spatie
-                        row.on = false;
-                        row.val = long;
-                    }*/
-                } else if(morseMix[z] == "-") {
-                    row.on = true;
-                    row.val = short;
-                    if(morseMix[z +1] == "." || morseMix[z +1] == "-"){
-                        row.on = false;
-                        row.val = time;
-                    } else { //anders is het een spatie
-                        row.on = false;
-                        row.val = 1000;
+//  socket.emit('chat message', text); //stuur het in de socket
+console.log(split);
+for(i=0; i < text.length; i++) {
+   //voer het zovaak uit als dat de array groot is
+var lees = split[i]; //kijk per letter
+lees = lees.toUpperCase(); //maak letters hoofdletters
+console.log(lees);
+var a = patternMap.letters.indexOf(lees); //kijk welke positie de bepaalde letter heeft in de array
+//   console.log(a);
+//  console.log(patternMap.morse[a]);
+    var input = patternMap.morse[a];
+poep.push(input); //stop de morse voor de bijbehordende letter in de array
+console.log(input);
+    var fullMorse = [];
+    var row = {};
+   // console.log(input[1 + 1]);
+    for(b=0; b < input.length; b++) {
+        console.log(b);
+        console.log(input[b+ 1]);
+        if(input[b] == ".") {
+            row.on = true;
+            row.val = time;
+            fullMorse.push(row);
 
-                    }
-                } else {
-                    console.log('geen van beide');
-                }
-                console.log('geen van beide');
-                fullMorse.push(row);
-            }
-            console.log(fullMorse);
-            // console.log(poep);
-
-        } else {
-            alert("wat hey dat kan niet");
+        }    else if (input[b] == "-") {
+            row.on = true;
+            row.val = short;
+            fullMorse.push(row);
         }
+    else if(input[b] == " ") {
+            row.on = false;
+            row.val = long;
+            fullMorse.push(row);
+        } else{
+            console.log("er is iets fout");
+        }
+            if(input[b +1] == "." || input[b +1] == "-"){
+                row.on = false;
+                row.val = time;
+                fullMorse.push(row);
+            } else { //anders is het een spatie
+                row.on = false;
+                row.val = long;
+                fullMorse.push(row);
+                
+
+            }
+
+    }
+    }
+console.log(fullMorse);
+
+var morseMix = poep.join(""); //zet het om naar een string
+console.log(morseMix);
+alert(morseMix);
+
+/*
+
+        for(z=0; z < morseMix.length; z++) { //for loop die de morsemix afgaat en kijkt of het een punt, streepje of spatie is.
+            //dit zou later in de bovenstaande loop gezet kunnen worden maar is voor duidelijkheid hier geplaatst.
 
 
-        return false;
+            if(morseMix[z] == "." || morseMix[z] == " ") {
+                //warning: tussen LETTERS komt ook tijd dus het moet in de andere loop
+                //idee om te kijken of het licht moet schijnen:
+                // array is dan ["wel" : 0.5, "niet" : 1.5"]
+                row.on = true;
+                row.val = time;
+                fullMorse.push(row);
 
-    });
+                  if(morseMix[z +1] == "." || morseMix[z +1] == "-"){
+                 row.on = false;
+                 row.val = time;
+                 } else { //anders is het een spatie
+                 row.on = false;
+                 row.val = long;
+                 }
+
+            } else if(morseMix[z] == "-") {
+                row.on = true;
+                row.val = short;
+                if(morseMix[z +1] == "." || morseMix[z +1] == "-"){
+                    row.on = false;
+                    row.val = time;
+                } else { //anders is het een spatie
+                    row.on = false;
+                    row.val = 1000;
+                     }
+            } else {
+                console.log('geen van beide');
+            }
+          //  console.log('geen van beide');
+            fullMorse.push(row);
+        }
+// console.log(poep);
+*/
+return false;
+});
 
 
-    //array wittewel
+//array wittewel
 
 </script>
 
