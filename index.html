@@ -12,6 +12,7 @@
 
 <input type="text" id="tekstbalk" autocomplete="off" value="cuck">
 <button style="width: 100px; height: 100px;">Send morse!</button>
+<div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 1"> lol</div>
 
 <script>
     var patternMap = {
@@ -57,43 +58,10 @@ var a = patternMap.letters.indexOf(lees); //kijk welke positie de bepaalde lette
 //  console.log(patternMap.morse[a]);
     var input = patternMap.morse[a];
 poep.push(input); //stop de morse voor de bijbehordende letter in de array
-console.log(input);
-    var fullMorse = [];
-    var row = {};
+
+
    // console.log(input[1 + 1]);
-    for(b=0; b < input.length; b++) {
-        console.log(b);
-        console.log(input[b+ 1]);
-        if(input[b] == ".") {
-            row.on = true;
-            row.val = time;
-            fullMorse.push(row);
 
-        }    else if (input[b] == "-") {
-            row.on = true;
-            row.val = short;
-            fullMorse.push(row);
-        }
-    else if(input[b] == " ") {
-            row.on = false;
-            row.val = long;
-            fullMorse.push(row);
-        } else{
-            console.log("er is iets fout");
-        }
-            if(input[b +1] == "." || input[b +1] == "-"){
-                row.on = false;
-                row.val = time;
-                fullMorse.push(row);
-            } else { //anders is het een spatie
-                row.on = false;
-                row.val = long;
-                fullMorse.push(row);
-                
-
-            }
-
-    }
     }
 console.log(fullMorse);
 
@@ -101,8 +69,10 @@ var morseMix = poep.join(""); //zet het om naar een string
 console.log(morseMix);
 alert(morseMix);
 
-/*
-
+        var fullMorse = [];
+        var fullMorse2 = [];
+        var row = {};
+        var row2 = {};
         for(z=0; z < morseMix.length; z++) { //for loop die de morsemix afgaat en kijkt of het een punt, streepje of spatie is.
             //dit zou later in de bovenstaande loop gezet kunnen worden maar is voor duidelijkheid hier geplaatst.
 
@@ -114,33 +84,68 @@ alert(morseMix);
                 row.on = true;
                 row.val = time;
                 fullMorse.push(row);
+                row = {};
 
-                  if(morseMix[z +1] == "." || morseMix[z +1] == "-"){
-                 row.on = false;
-                 row.val = time;
-                 } else { //anders is het een spatie
-                 row.on = false;
-                 row.val = long;
-                 }
 
             } else if(morseMix[z] == "-") {
                 row.on = true;
                 row.val = short;
-                if(morseMix[z +1] == "." || morseMix[z +1] == "-"){
-                    row.on = false;
-                    row.val = time;
-                } else { //anders is het een spatie
-                    row.on = false;
-                    row.val = 1000;
-                     }
-            } else {
+                fullMorse.push(row);
+                row = {};
+
+            } else if (morseMix[z] == " ") {
+                row.on = false;
+                row.val = short;
+                fullMorse.push(row);
+                row = {};
+    }
+            else {
                 console.log('geen van beide');
             }
+
+            if(morseMix[z +1] == "." || morseMix[z +1] == "-"){
+                row.on = false;
+                row.val = time;
+                fullMorse.push(row);
+                row = {};
+            } else if(morseMix[z +1] == " ") { //anders is het een spatie
+                row.on = false;
+                row.val = long;
+                fullMorse.push(row);
+                row = {};
+            }
+            else {
+
+            }
           //  console.log('geen van beide');
-            fullMorse.push(row);
         }
+        console.log(fullMorse);
+        var d = 1;                     //  set your counter to 1
+
+        function myLoop () {           //  create a loop function
+            setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+                console.log(fullMorse[d]);          //  your code here
+                d++;                     //  increment the counter
+                if (d < 10) {            //  if the counter < 10, call the loop function
+                    myLoop();             //  ..  again which will trigger another
+                }                        //  ..  setTimeout()
+            }, 3000)
+        }
+
+        myLoop();                      //  start the loop
+
+
+        for (c=0; c < fullMorse.length; c++) {
+        console.log(fullMorse[c]);
+            if (fullMorse[c].on = true) {
+                    $('.lol').css("opacity", "1").delay(fullMorse[c].val * 1000);
+            } else {
+                    $('.lol').css("opacity", "0").delay(fullMorse[c].val * 1000);
+            }
+        }
+
 // console.log(poep);
-*/
+
 return false;
 });
 
