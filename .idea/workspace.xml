@@ -18,8 +18,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="144" column="9" lean-forward="true" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
+            <state relative-caret-position="527">
+              <caret line="127" column="22" lean-forward="false" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -36,6 +36,13 @@
       <find>blink1</find>
       <find>blink</find>
       <find>animated</find>
+      <find>time</find>
+      <find>alert</find>
+      <find>item</find>
+      <find>content</find>
+      <find>intro</find>
+      <find>font-w</find>
+      <find>pic</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -47,6 +54,10 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp47233/domains/werkjewel.nl/public_html/application/views/pages/locationtest.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp04346/domains/werkjewel.nl/public_html/assets/style/style.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp44968/domains/werkjewel.nl/public_html/application/views/pages/home.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp14894/domains/i367471.iris.fhict.nl/public_html/s3portfolio/programmeren.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp40562/domains/i367471.iris.fhict.nl/public_html/s3portfolio/visie.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp40893/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp42824/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -84,6 +95,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -98,8 +111,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,15 +191,16 @@
       <workItem from="1527494124275" duration="9574000" />
       <workItem from="1527511802055" duration="698000" />
       <workItem from="1527541552517" duration="2988000" />
-      <workItem from="1527611345369" duration="2014000" />
+      <workItem from="1527611345369" duration="12945000" />
+      <workItem from="1527797866796" duration="324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33582000" />
+    <option name="totallyTimeSpent" value="44837000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1546875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -269,10 +281,14 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp44968/domains/werkjewel.nl/public_html/application/views/pages/home.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp04346/domains/werkjewel.nl/public_html/assets/style/style.css" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp47233/domains/werkjewel.nl/public_html/application/views/pages/locationtest.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp14894/domains/i367471.iris.fhict.nl/public_html/s3portfolio/programmeren.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40893/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40562/domains/i367471.iris.fhict.nl/public_html/s3portfolio/visie.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42824/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="144" column="9" lean-forward="true" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
+        <state relative-caret-position="527">
+          <caret line="127" column="22" lean-forward="false" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

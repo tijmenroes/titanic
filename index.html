@@ -13,7 +13,8 @@
 <input type="text" id="tekstbalk" autocomplete="off" value="cuck">
 <button style="width: 100px; height: 100px;">Send morse!</button>
 <div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 1"> lol</div>
-
+<br>
+<p id="demo"></p>
 <script>
     var patternMap = {
         "morse":[
@@ -40,7 +41,7 @@
 // alert("wat hey dat kan niet");
 }
 
-        var time = 0.5;
+        var time = 1;
         var short = time * 3;
         var long = time * 7;
 
@@ -67,7 +68,6 @@ console.log(fullMorse);
 
 var morseMix = poep.join(""); //zet het om naar een string
 console.log(morseMix);
-alert(morseMix);
 
         var fullMorse = [];
         var fullMorse2 = [];
@@ -121,28 +121,33 @@ alert(morseMix);
         }
         console.log(fullMorse);
         var d = 1;                     //  set your counter to 1
-
+        var haha ="";
         function myLoop () {           //  create a loop function
+            const counter = fullMorse[d].val * 1000;
             setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-                console.log(fullMorse[d]);          //  your code here
-                d++;                     //  increment the counter
-                if (d < 10) {            //  if the counter < 10, call the loop function
+                d++;       //  your code here
+                console.log(fullMorse[d]);
+                haha = fullMorse[d].on + ": " + fullMorse[d].val;
+                document.getElementById("demo").innerHTML = haha;
+                if (fullMorse[d].on === true) {
+                    $('.lol').css("opacity", "1");
+                    console.log("aan");
+
+                } else {
+                    $('.lol').css("opacity", "0");
+                }
+
+                                    //  increment the counter
+
+                if (d < fullMorse.length  ) {            //  if the counter < 10, call the loop function
                     myLoop();             //  ..  again which will trigger another
                 }                        //  ..  setTimeout()
-            }, 3000)
+            }, counter)
         }
 
         myLoop();                      //  start the loop
 
 
-        for (c=0; c < fullMorse.length; c++) {
-        console.log(fullMorse[c]);
-            if (fullMorse[c].on = true) {
-                    $('.lol').css("opacity", "1").delay(fullMorse[c].val * 1000);
-            } else {
-                    $('.lol').css("opacity", "0").delay(fullMorse[c].val * 1000);
-            }
-        }
 
 // console.log(poep);
 
