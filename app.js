@@ -19,11 +19,11 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
-io.on('connection', function(socket){
+io.on('connection', function(socket){ //als er een connectie gemaakt word
     console.log('a user connected');
 });
 
-http.listen(3000, function(){
+http.listen(3000, function(){ //wannneer de server start
     console.log('listening on *:3000');
 });
 

@@ -14,6 +14,7 @@
 <button style="width: 100px; height: 100px;">Send morse!</button>
 <div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 1"> lol</div>
 <br>
+<p id="morsecode"></p>
 <p id="demo"></p>
 <script>
     var patternMap = {
@@ -40,6 +41,12 @@
 } else {
 // alert("wat hey dat kan niet");
 }
+        if (typeof buttonbusy !== 'undefined') { //kijk of de variable al ge set is.
+            alert("Wacht totdat de morse klaar is!");
+        }
+buttonbusy = 1;
+        console.log(buttonbusy);
+
 
         var time = 1;
         var short = time * 3;
@@ -59,23 +66,18 @@ var a = patternMap.letters.indexOf(lees); //kijk welke positie de bepaalde lette
 //  console.log(patternMap.morse[a]);
     var input = patternMap.morse[a];
 poep.push(input); //stop de morse voor de bijbehordende letter in de array
-
-
    // console.log(input[1 + 1]);
-
     }
 console.log(fullMorse);
-
 var morseMix = poep.join(""); //zet het om naar een string
 console.log(morseMix);
-
+        document.getElementById("morsecode").innerHTML = morseMix;
         var fullMorse = [];
         var fullMorse2 = [];
         var row = {};
         var row2 = {};
         for(z=0; z < morseMix.length; z++) { //for loop die de morsemix afgaat en kijkt of het een punt, streepje of spatie is.
             //dit zou later in de bovenstaande loop gezet kunnen worden maar is voor duidelijkheid hier geplaatst.
-
 
             if(morseMix[z] == "." || morseMix[z] == " ") {
                 //warning: tussen LETTERS komt ook tijd dus het moet in de andere loop
@@ -85,7 +87,6 @@ console.log(morseMix);
                 row.val = time;
                 fullMorse.push(row);
                 row = {};
-
 
             } else if(morseMix[z] == "-") {
                 row.on = true;
@@ -120,18 +121,19 @@ console.log(morseMix);
           //  console.log('geen van beide');
         }
         console.log(fullMorse);
+
         var d = 1;                     //  set your counter to 1
         var haha ="";
         function myLoop () {           //  create a loop function
             const counter = fullMorse[d].val * 1000;
             setTimeout(function () {    //  call a 3s setTimeout when the loop is called
                 d++;       //  your code here
-                console.log(fullMorse[d]);
+
                 haha = fullMorse[d].on + ": " + fullMorse[d].val;
                 document.getElementById("demo").innerHTML = haha;
                 if (fullMorse[d].on === true) {
                     $('.lol').css("opacity", "1");
-                    console.log("aan");
+
 
                 } else {
                     $('.lol').css("opacity", "0");
@@ -139,7 +141,7 @@ console.log(morseMix);
 
                                     //  increment the counter
 
-                if (d < fullMorse.length  ) {            //  if the counter < 10, call the loop function
+                if (d < fullMorse.length -1  ) {            //  als d nog niet klaar is, start de loop weer.
                     myLoop();             //  ..  again which will trigger another
                 }                        //  ..  setTimeout()
             }, counter)
@@ -147,15 +149,15 @@ console.log(morseMix);
 
         myLoop();                      //  start the loop
 
-
-
-// console.log(poep);
-
+        console.log(buttonbusy);
+        delete buttonbusy; //return true
+        console.log(buttonbusy); //error, g_b is not defined
 return false;
+
 });
 
 
-//array wittewel
+
 
 </script>
 

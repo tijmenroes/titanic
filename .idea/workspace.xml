@@ -14,16 +14,13 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="127" column="22" lean-forward="false" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="167">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,6 +40,12 @@
       <find>intro</find>
       <find>font-w</find>
       <find>pic</find>
+      <find>h1</find>
+      <find>navul</find>
+      <find>h5</find>
+      <find>kopje</find>
+      <find>navbar</find>
+      <find>widgets die wij</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -58,6 +61,15 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp40562/domains/i367471.iris.fhict.nl/public_html/s3portfolio/visie.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp40893/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp42824/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp11406/domains/werkjewel.nl/public_html/application/views/pages/personen.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp47153/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/head.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp45972/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp50337/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp15609/domains/i367471.iris.fhict.nl/public_html/s3portfolio/programmeren.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp59964/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp54962/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp42605/domains/i367471.iris.fhict.nl/public_html/s3portfolio/storytelling.php" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -95,8 +107,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -118,6 +130,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -192,15 +205,19 @@
       <workItem from="1527511802055" duration="698000" />
       <workItem from="1527541552517" duration="2988000" />
       <workItem from="1527611345369" duration="12945000" />
-      <workItem from="1527797866796" duration="324000" />
+      <workItem from="1527797866796" duration="2015000" />
+      <workItem from="1527840585894" duration="8473000" />
+      <workItem from="1528034568036" duration="3948000" />
+      <workItem from="1528115138151" duration="34000" />
+      <workItem from="1528115173417" duration="1241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44837000" />
+    <option name="totallyTimeSpent" value="60224000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1051" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1546875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -234,14 +251,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp54962/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42605/domains/i367471.iris.fhict.nl/public_html/s3portfolio/storytelling.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp59964/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -249,10 +272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -260,10 +279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -271,10 +286,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -285,14 +303,26 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40893/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40562/domains/i367471.iris.fhict.nl/public_html/s3portfolio/visie.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42824/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp11406/domains/werkjewel.nl/public_html/application/views/pages/personen.php" />
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp47153/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/head.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp50337/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp15609/domains/i367471.iris.fhict.nl/public_html/s3portfolio/programmeren.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp45972/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp59964/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp54962/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42605/domains/i367471.iris.fhict.nl/public_html/s3portfolio/storytelling.php" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="127" column="22" lean-forward="false" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="167">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
