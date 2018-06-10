@@ -29,12 +29,18 @@
     </ul>
     </div>
     <script>
+        $( document ).ready(function() {
+
+        $(".morsetext").focus();
         $("#click1").on("click", function() {
+
             console.log("click");
             $('html,body').animate({
-                    scrollTop: $("#page2").offset().top},
+                    scrollTop: $("#page1").offset().top},
                 'slow');
+
         });
+
         $("#click2").on("click", function() {
             console.log("click");
             $('html,body').animate({
@@ -44,29 +50,37 @@
         $("#click3").on("click", function() {
             console.log("click");
             $('html,body').animate({
-                    scrollTop: $("#page2").offset().top},
+                    scrollTop: $("#page3").offset().top},
                 'slow');
         });
         $("#click4").on("click", function() {
             console.log("click");
             $('html,body').animate({
-                    scrollTop: $("#page2").offset().top},
+                    scrollTop: $("#page4").offset().top},
                 'slow');
         });
+
+        });
     </script>
-<input type="text" id="tekstbalk" autocomplete="off" value="cuck">
-<button style="width: 100px; height: 100px;">Send morse!</button>
+<input class="morsetext" type="text" id="tekstbalk" autocomplete="off" value="cuck">
+<button class="morsebutton">Send morse!</button>
 <div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 0; background-image: url('img/sunburst.jpg'); background-size: 100px 100px;; transition: .4s;"> lol</div>
 <br>
 <p id="morsecode"></p>
 <p id="demo"></p>
 
-
+<img src="img/boatonly.png" class="boatfront">
 
 
 
 </div>
 <div class="page" id="page2">
+
+</div>
+<div class="page" id="page3">
+
+</div>
+<div class="page" id="page4">
 
 </div>
 

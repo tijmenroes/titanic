@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="778">
-              <caret line="52" column="57" lean-forward="true" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+            <state relative-caret-position="646">
+              <caret line="71" column="44" lean-forward="false" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="625">
+              <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -108,8 +108,8 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp58252/domains/i367471.iris.fhict.nl/public_html/s3portfolio/audiovisueel.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp31816/domains/i367471.iris.fhict.nl/public_html/s3portfolio/hardware.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp32492/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -253,12 +253,12 @@
       <workItem from="1528220557551" duration="4952000" />
       <workItem from="1528296993075" duration="19632000" />
       <workItem from="1528496317528" duration="3667000" />
-      <workItem from="1528653828765" duration="498000" />
+      <workItem from="1528653828765" duration="3069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91508000" />
+    <option name="totallyTimeSpent" value="94079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
@@ -418,21 +418,21 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40310/domains/i367471.iris.fhict.nl/public_html/s3portfolio/usertests.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp31816/domains/i367471.iris.fhict.nl/public_html/s3portfolio/hardware.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp32492/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="52" column="57" lean-forward="true" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+        <state relative-caret-position="646">
+          <caret line="71" column="44" lean-forward="false" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
