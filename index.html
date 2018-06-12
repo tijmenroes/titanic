@@ -11,71 +11,114 @@
 </head>
 
 <body>
-<div class="page" id="page1">
-    <div class="nav">
+<div class="nav">
     <ul>
-        <li class="lijst" id="click1">
+        <li class="lijst" id="click1 klik">
             1
         </li>
-        <li class="lijst" id="click2">
+        <li class="lijst" id="click2 klik">
             2
         </li>
-        <li class="lijst" id="click3">
+        <li class="lijst" id="click3 klik">
             3
         </li>
-        <li class="lijst" id="click4">
+        <li class="lijst" id="click4 klik">
             4
         </li>
     </ul>
-    </div>
-    <script>
-        $( document ).ready(function() {
+</div>
+<script>
+    $( document ).ready(function() {
+        function scroll(page) { //Functie waarbij je page alleen hoeft te veranderen in het id van de div, daarna zal die scrollen naar de div
+            $('html,body').animate({
+                    scrollTop: $(page).offset().top
+                },
+                'slow');
 
-        $(".morsetext").focus();
+        }
+        var pageNr = 1;//set page nr op 1, je begint altijd op 1 namelijk.
+        $(".morsetext").focus(); //highlight de textbox
+
+
         $("#click1").on("click", function() {
 
-            console.log("click");
-            $('html,body').animate({
-                    scrollTop: $("#page1").offset().top},
-                'slow');
-
+      pageNr = 1;
         });
-
         $("#click2").on("click", function() {
-            console.log("click");
-            $('html,body').animate({
-                    scrollTop: $("#page2").offset().top},
-                'slow');
+
+            pageNr = 2;
+            console.log(pageNr);
         });
         $("#click3").on("click", function() {
-            console.log("click");
-            $('html,body').animate({
-                    scrollTop: $("#page3").offset().top},
-                'slow');
+            pageNr = 3;
         });
         $("#click4").on("click", function() {
-            console.log("click");
-            $('html,body').animate({
-                    scrollTop: $("#page4").offset().top},
-                'slow');
+            pageNr = 4;
         });
+        $('.arrowmove').on("click", function() {
+            if(pageNr == 4){//laatste waarde, hoeft dus niks mee te gebeuren
 
+            } else {
+                pageNr = pageNr + 1;
+            }
         });
-    </script>
+$("#klik").on("click", function() {// kijk welke het pagenr het is en op basis daarvan ga je naar de juiste pagina.
+    switch (pageNr) {
+        case 1:
+            console.log("1");
+           scroll("#page1");
+            break;
+        case 2:
+            scroll("#page2");
+            break;
+        case 3:
+            scroll("#page3");
+            break;
+        case 4:
+            scroll("#page4");
+            break;
+        default:
+            console.log("lol");
+            break;
+    }
+});
+
+        window.setInterval(function () {
+            $('.arrowmove').fadeIn(500);
+            $('.arrowmove').animate({top: "94.5%"}, 1500);
+            $('.arrowmove').fadeOut(500);
+            $('.arrowmove').animate({top: "90%"}, 0);
+        }, 1000);
+
+    });
+</script>
+<div class="page" id="page1" style="background-image:url(img/boatonly.png); background-size: contain">
+
+    <div class="morsegroup">
+        <div class="morseuitleg">
+        <p>Try it out, type your name here!</p>
+        </div>
 <input class="morsetext" type="text" id="tekstbalk" autocomplete="off" value="cuck">
 <button class="morsebutton">Send morse!</button>
 <div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 0; background-image: url('img/sunburst.jpg'); background-size: 100px 100px;; transition: .4s;"> lol</div>
 <br>
 <p id="morsecode"></p>
 <p id="demo"></p>
-
-<img src="img/boatonly.png" class="boatfront">
-
+    </div>
 
 
+
+    <img class="arrowmove" src="img/arrowlol.png" id="klik">
 </div>
 <div class="page" id="page2">
-
+    <div class="verhaal">
+        <h1>Titanic</h1>
+        <p>Toen de Titanic weg aan het varen was, was de sfeer erg goed op de boot. De bemanning was toch blij dat het wegvaren uiteindelijk gelukt was. De zon scheen,
+            de vogels fluiten en je hoorde de golven klotsen tegen de boot. De passagiers zaten te genieten bij het zwembad, de bar of gewoon op hun kamer even uit te rusten.
+            Over ongeveer 1.5 maand zouden ze het drukke New York bereiken. Velen waren op pad naar New York voor zaken maar ook velen natuurlijk voor vakantie of gewoonweg voor de cruise reis. <br>
+            De marconisten (morsecode operators) verstuurden grappend berichten naar andere boten, zo gingen de morse berichten over het uitlachen van straattaal van elkaar met lichte beledigingen.
+            De passagiers die het geld ervoor hadden mochten morsecode sturen naar huis, zo stuurden ze dingen zoals “Alles is goed, ik ben niet zeeziek”. </p>
+    </div>
 </div>
 <div class="page" id="page3">
 

@@ -14,34 +14,25 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="196" column="38" lean-forward="false" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
+            <state relative-caret-position="-2978">
+              <caret line="64" column="115" lean-forward="false" selection-start-line="64" selection-start-column="115" selection-end-line="64" selection-end-column="115" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="johnny.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/johnny.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="47" column="30" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="1020">
+              <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -51,14 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dot</find>
-      <find>blink1</find>
-      <find>blink</find>
-      <find>animated</find>
-      <find>time</find>
-      <find>alert</find>
-      <find>item</find>
-      <find>content</find>
       <find>intro</find>
       <find>font-w</find>
       <find>pic</find>
@@ -80,6 +63,15 @@
       <find>h1</find>
       <find>navbar</find>
       <find>usertest</find>
+      <find>var led</find>
+      <find>40</find>
+      <find>studenten aanwezig</find>
+      <find>chart</find>
+      <find>kijk</find>
+      <find>items</find>
+      <find>arrowmove</find>
+      <find>arrow</find>
+      <find>morsegroup</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,12 +111,15 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp58252/domains/i367471.iris.fhict.nl/public_html/s3portfolio/audiovisueel.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp31816/domains/i367471.iris.fhict.nl/public_html/s3portfolio/hardware.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp32492/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp29586/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp30421/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp49353/domains/i367471.iris.fhict.nl/public_html/s3portfolio/usertests.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp42593/domains/i367471.iris.fhict.nl/public_html/s3portfolio/storytelling.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp58082/domains/werkjewel.nl/public_html/application/views/pages/statistieken2.php" />
         <option value="$PROJECT_DIR$/johnny.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp38155/domains/i367471.iris.fhict.nl/public_html/project/chartstyle.css" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -161,8 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,6 +170,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,15 +269,18 @@
       <workItem from="1528296993075" duration="19632000" />
       <workItem from="1528496317528" duration="3667000" />
       <workItem from="1528653828765" duration="5013000" />
-      <workItem from="1528716946761" duration="2704000" />
+      <workItem from="1528716946761" duration="5617000" />
+      <workItem from="1528798725966" duration="7194000" />
+      <workItem from="1528827789241" duration="4698000" />
+      <workItem from="1528835380693" duration="3217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98727000" />
+    <option name="totallyTimeSpent" value="116749000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -316,17 +314,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp49547/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp54962/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42605/domains/i367471.iris.fhict.nl/public_html/s3portfolio/storytelling.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp59964/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -405,69 +392,61 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40310/domains/i367471.iris.fhict.nl/public_html/s3portfolio/usertests.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp31816/domains/i367471.iris.fhict.nl/public_html/s3portfolio/hardware.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp32492/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp30421/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp49353/domains/i367471.iris.fhict.nl/public_html/s3portfolio/usertests.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp29586/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42134/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/head.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42593/domains/i367471.iris.fhict.nl/public_html/s3portfolio/storytelling.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp58082/domains/werkjewel.nl/public_html/application/views/pages/statistieken2.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp07771/domains/werkjewel.nl/public_html/assets/style/style.css" />
+    <entry file="file://$PROJECT_DIR$/johnny.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp30421/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="74" column="17" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp49353/domains/i367471.iris.fhict.nl/public_html/s3portfolio/usertests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="136" column="10" lean-forward="false" selection-start-line="136" selection-start-column="10" selection-end-line="136" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp29586/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="874" column="7" lean-forward="false" selection-start-line="874" selection-start-column="7" selection-end-line="900" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42134/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="62" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="62" />
+        <state relative-caret-position="408">
+          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="651">
+          <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="56" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp38155/domains/i367471.iris.fhict.nl/public_html/project/chartstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="136" column="12" lean-forward="true" selection-start-line="136" selection-start-column="12" selection-end-line="136" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp37216/domains/i367471.iris.fhict.nl/public_html/project/chartprediction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="183" column="5" lean-forward="false" selection-start-line="183" selection-start-column="5" selection-end-line="188" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="196" column="38" lean-forward="false" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
+        <state relative-caret-position="-2978">
+          <caret line="64" column="115" lean-forward="false" selection-start-line="64" selection-start-column="115" selection-end-line="64" selection-end-column="115" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/johnny.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="47" column="30" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>

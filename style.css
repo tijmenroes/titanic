@@ -22,6 +22,9 @@ time, mark, audio, video {
     font-family: ITC;
     src: url(StoneInformalStd-Medium.otf);
 }
+p {
+    font-family: "ITC";
+}
 
 body{
     overflow-y: hidden;
@@ -49,17 +52,41 @@ body{
 
 
   }
+.arrowmove {
+    width: 2.8%;
+    left: 50%;
+    top: 90%;
+    position: absolute;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+  .verhaal{
+      z-index:10;
+      position: relative;
+      margin-left:2%;
+      top: 40%;
+      width: 50%;
+  }
+  .verhaal h1 {
+      Font-family: "ITC";
+      Font-size: 3vh;
+  }
+  .verhaal p {
+      Font-family: "ITC";
+      Font-size: 2vh;
+  }
+  .morsegroup{
+      z-index:10;
+      position: relative;
+      margin-left:2%;
+      top:18%;
+  }
   .morsebutton {
       width: 10%;
-      margin-left: 5%;
+      margin-left: 3%;
       height: 10%;
       display: inline-block;
-      -webkit-box-sizing: content-box;
-      -moz-box-sizing: content-box;
-      box-sizing: content-box;
-      padding: 10px 20px;
-      border: 1px solid #b7b7b7;
-      -webkit-border-radius: 3px;
+       -webkit-border-radius: 3px;
       border-radius: 3px;
       font: normal normal bold 16px/normal "ITC", Times, serif;
       color: rgba(0,142,198,1);
@@ -80,6 +107,8 @@ body{
       box-shadow: 0 3px 18px 2px rgba(0,0,0,0.17) ;
       text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
       z-index:10;
+
+      border-radius: 3px;
   }
   .boatfront {
       position:fixed;
