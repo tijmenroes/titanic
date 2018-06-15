@@ -12,17 +12,17 @@
 
 <body>
 <div class="nav">
-    <ul>
-        <li class="lijst" id="click1 klik">
+    <ul class="klik">
+        <li class="lijst" id="click1">
             1
         </li>
-        <li class="lijst" id="click2 klik">
+        <li class="lijst" id="click2">
             2
         </li>
-        <li class="lijst" id="click3 klik">
+        <li class="lijst" id="click3">
             3
         </li>
-        <li class="lijst" id="click4 klik">
+        <li class="lijst" id="click4">
             4
         </li>
     </ul>
@@ -41,7 +41,7 @@
 
 
         $("#click1").on("click", function() {
-
+        console.log("wa");
       pageNr = 1;
         });
         $("#click2").on("click", function() {
@@ -62,7 +62,7 @@
                 pageNr = pageNr + 1;
             }
         });
-$("#klik").on("click", function() {// kijk welke het pagenr het is en op basis daarvan ga je naar de juiste pagina.
+$(".klik").on("click", function() {// kijk welke het pagenr het is en op basis daarvan ga je naar de juiste pagina.
     switch (pageNr) {
         case 1:
             console.log("1");
@@ -92,7 +92,7 @@ $("#klik").on("click", function() {// kijk welke het pagenr het is en op basis d
 
     });
 </script>
-<div class="page" id="page1" style="background-image:url(img/boatonly.png); background-size: contain">
+<div class="page" id="page1" style="background-image:url(img/kutgifbro.gif); background-size: 100% 100%;">
 
     <div class="morsegroup">
         <div class="morseuitleg">
@@ -108,7 +108,7 @@ $("#klik").on("click", function() {// kijk welke het pagenr het is en op basis d
 
 
 
-    <img class="arrowmove" src="img/arrowlol.png" id="klik">
+    <img class="arrowmove klik" src="img/arrowlol.png">
 </div>
 <div class="page" id="page2">
     <div class="verhaal">
@@ -137,7 +137,7 @@ $("#klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             , "4", "5", "6", "7", "8", "9", "0", " "]};
 
 
-    //  var socket = io();
+     var socket = io();
     // var morse = require('morse');
     //morse code conversie staat op app.js
     // var encoded = morse.encode('Hello, world.');
@@ -165,7 +165,7 @@ $("#klik").on("click", function() {// kijk welke het pagenr het is en op basis d
 
             var split = Array.from(text); //maak een array van de var text
 
-//  socket.emit('chat message', text); //stuur het in de socket
+
             console.log(split);
             for(i=0; i < text.length; i++) {
                 //voer het zovaak uit als dat de array groot is
@@ -245,10 +245,12 @@ $("#klik").on("click", function() {// kijk welke het pagenr het is en op basis d
                     document.getElementById("demo").innerHTML = haha;
                     if (fullMorse[d].on === true) {
                         $('.lol').css("opacity", "1");
+                        socket.emit('chat message', "on"); //stuur het in de socket
 
 
                     } else {
                         $('.lol').css("opacity", "0");
+                        socket.emit('chat message', "off"); //stuur het in de socket
                     }
 
                     //  increment the counter
