@@ -36,12 +36,14 @@
                 'slow');
 
         }
+        var thunderaudio = new Audio('img/thunder_crack.mp3');
+
         var pageNr = 1;//set page nr op 1, je begint altijd op 1 namelijk.
         $(".morsetext").focus(); //highlight de textbox
 
 
         $("#click1").on("click", function() {
-        console.log("wa");
+
       pageNr = 1;
         });
         $("#click2").on("click", function() {
@@ -51,6 +53,7 @@
         });
         $("#click3").on("click", function() {
             pageNr = 3;
+            thunderaudio.play();
         });
         $("#click4").on("click", function() {
             pageNr = 4;
@@ -122,12 +125,14 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
 </div>
 <div class="page" id="page3">
 
+
 </div>
 <div class="page" id="page4">
 
 </div>
 
 <script>
+    //Zet een variable met 2 arrays, 1 zijn de morsecodes, tweede zijn de letters op de zelfde plek die bij de morse horen.
     var patternMap = {
         "morse":[
             ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---","-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-",
@@ -137,12 +142,9 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             , "4", "5", "6", "7", "8", "9", "0", " "]};
 
 
-     var socket = io();
-    // var morse = require('morse');
-    //morse code conversie staat op app.js
-    // var encoded = morse.encode('Hello, world.');
-    // alert(encoded);
-    $('button').on("click", function(){
+     var socket = io(); //haal socket op
+
+    $('button').on("click", function(){ //wanneer button geclicked word
         var poep = [];//set de var hier zodat hij elke buttonclick ook weer leeg gemaakt word
         var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
         text = text.toUpperCase(); //zet om in hoofdletters.
@@ -158,9 +160,9 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             buttonbusy = 1;
             console.log(buttonbusy);
 
-            var time = 1;
-            var short = time * 3;
-            var long = time * 7;
+            var time = 1; //1 morse time fragment, denk aan een dot
+            var short = time * 3; //streepje in morse
+            var long = time * 7;//een spatie in morse
 
             var split = Array.from(text); //maak een array van de var text
 
@@ -172,11 +174,10 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
 
                 console.log(lees);
                 var a = patternMap.letters.indexOf(lees); //kijk welke positie de bepaalde letter heeft in de array
-//   console.log(a);
-//  console.log(patternMap.morse[a]);
+
                 var input = patternMap.morse[a];
                 poep.push(input); //stop de morse voor de bijbehordende letter in de array
-                // console.log(input[1 + 1]);
+
             }
             console.log(fullMorse);
             var morseMix = poep.join(""); //zet het om naar een string
@@ -187,12 +188,8 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             var row = {};
             var row2 = {};
             for(z=0; z < morseMix.length; z++) { //for loop die de morsemix afgaat en kijkt of het een punt, streepje of spatie is.
-                //dit zou later in de bovenstaande loop gezet kunnen worden maar is voor duidelijkheid hier geplaatst.
 
-                if(morseMix[z] == "." || morseMix[z] == " ") { //kijk wat de letter erna is.
-                    //warning: tussen LETTERS komt ook tijd dus het moet in de andere loop
-                    //idee om te kijken of het licht moet schijnen:
-                    // array is dan ["wel" : 0.5, "niet" : 1.5"]
+                if(morseMix[z] == "." || morseMix[z] == " ") {
                     row.on = true;
                     row.val = time;
                     fullMorse.push(row);
@@ -228,43 +225,43 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
                 else { //undefined of niks, doe niks.
 
                 }
-                //  console.log('geen van beide');
+
             }
             console.log(fullMorse);
 
-            var d = 1;                     //  set your counter to 1
+            var d = 1;                     //zet de
             var haha ="";
             function myLoop () {           //  create a loop function
 
-                const counter = fullMorse[d].val * 1000;
-                setTimeout(function () {    //  call a  setTimeout when the loop is called
-                    d++;       //  your code here
+                const counter = fullMorse[d].val * 1000; //zet een
+                setTimeout(function () {    //setTimeout zodat er een delay zit wanneer de loop opnieuw word uitgevoerd.
+                    d++;                    // counter + 1
 
-                    haha = fullMorse[d].on + ": " + fullMorse[d].val;
+                    haha = fullMorse[d].on + ": " + fullMorse[d].val; //laat zien op de page
                     document.getElementById("demo").innerHTML = haha;
-                    if (fullMorse[d].on === true) {
-                        $('.lol').css("opacity", "1");
+                    if (fullMorse[d].on === true) { //wanneer on true als waarde heeft
+                        $('.lol').css("opacity", "1"); //lichtje gaat aan
                         socket.emit('chat message', "on"); //stuur het in de socket
 
 
                     } else {
-                        $('.lol').css("opacity", "0");
+                        $('.lol').css("opacity", "0"); //lichtje gaat uit.
                         socket.emit('chat message', "off"); //stuur het in de socket
                     }
 
-                    //  increment the counter
+
 
                     if (d < fullMorse.length -1  ) {            //  als d nog niet klaar is, start de loop weer.
-                        myLoop();             //  ..  again which will trigger another
-                    }                        //  ..  setTimeout()
+                        myLoop();
+                    }
                 }, counter)
             }
 
-            myLoop();                      //  start the loop
+            myLoop();                      //start de loop
 
             console.log(buttonbusy);
-            delete buttonbusy; //return true
-            console.log(buttonbusy); //error, g_b is not defined
+            delete buttonbusy; //=test
+            console.log(buttonbusy); //=test
 
         } else { //als je rare tekens gebruikt zal er niks gebeuren. Helaas!
             alert("Je hebt rare tekens gebruikt!");

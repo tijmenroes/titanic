@@ -25,7 +25,7 @@ http.listen(3000, function(){ //wannneer de server start
 
  io.on('connection', function(socket){
     socket.on('chat message', function(msg){
-    //    console.log('Morse:: ' + msg);
+
     });
 });
 
@@ -33,35 +33,34 @@ http.listen(3000, function(){ //wannneer de server start
 
 //hier begint de arduino code
 
-var five = require("johnny-five");
+var five = require("johnny-five"); //require de johnny five library
 
-var board = new five.Board();
+var board = new five.Board(); //het arduino board
 
-board.on("ready", function() {
-    var piezo = new five.Piezo(3);
+board.on("ready", function() { //wanneer het board ready is
+    var piezo = new five.Piezo(3); //speaker is op pin 3
 
-    // Injects the piezo into the repl
-    board.repl.inject({
+
+    board.repl.inject({  // Inject de piezo in het board, zodat je het kan gebruiken
         piezo: piezo
     });
-    var led = new five.Led(11);
-    io.on('connection', function (socket) {
-        socket.on('chat message', function (msg) {
+    var led = new five.Led(11); //led pin is 11
+    io.on('connection', function (socket) { //als er een connectie met de socket is gemaakt
+        socket.on('chat message', function (msg) { // wanneer er een socket message binnenkomt volg het onderstaande uit.
 
            console.log(msg);
-           if(msg == "on"){
-               console.log("STAAT AAN MAN");
-               led.on();
+           if(msg == "on"){ //wanneer de message die je binnenkrijgt on is
+                 led.on();
                piezo.play({
                    song: [
-                       [ 698, 20 ] // Play frequency 698 for 1 beat
+                       [ 698, 150 ] //Speel een frequentie af op de piezo, voor 150 beats (beats staat nu op 150 per min)
                        ]
                });
            }
-           else if (msg== "off"){
+           else if (msg== "off"){ //wanneer de message off is
                console.log("STAAT UIT MAN");
                led.off();
-               piezo.noTone();
+               piezo.noTone(); //Piezo stopt, queue stopt ook
            }
            else {
                console.log("lol");
