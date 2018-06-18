@@ -38,6 +38,12 @@ var five = require("johnny-five");
 var board = new five.Board();
 
 board.on("ready", function() {
+    var piezo = new five.Piezo(3);
+
+    // Injects the piezo into the repl
+    board.repl.inject({
+        piezo: piezo
+    });
     var led = new five.Led(11);
     io.on('connection', function (socket) {
         socket.on('chat message', function (msg) {
@@ -46,10 +52,16 @@ board.on("ready", function() {
            if(msg == "on"){
                console.log("STAAT AAN MAN");
                led.on();
+               piezo.play({
+                   song: [
+                       [ 698, 20 ] // Play frequency 698 for 1 beat
+                       ]
+               });
            }
            else if (msg== "off"){
                console.log("STAAT UIT MAN");
                led.off();
+               piezo.noTone();
            }
            else {
                console.log("lol");

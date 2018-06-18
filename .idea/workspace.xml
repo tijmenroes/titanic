@@ -31,18 +31,18 @@
       <file leaf-file-name="johnny.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/johnny.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
+            <state relative-caret-position="90">
               <caret line="47" column="53" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="47" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+            <state relative-caret-position="651">
+              <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="piezo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="piezo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/piezo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="306">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -168,9 +168,9 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp57740/domains/werkjewel.nl/public_html/application/views/pages/statistieken2.php" />
         <option value="$PROJECT_DIR$/thomas.js" />
         <option value="$PROJECT_DIR$/johnny.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/piezo.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -326,12 +326,12 @@
       <workItem from="1528835380693" duration="5191000" />
       <workItem from="1528881598469" duration="2111000" />
       <workItem from="1529055184289" duration="7176000" />
-      <workItem from="1529313292900" duration="3833000" />
+      <workItem from="1529313292900" duration="4247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131843000" />
+    <option name="totallyTimeSpent" value="132257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
@@ -431,22 +431,6 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40485/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp06955/domains/werkjewel.nl/public_html/assets/style/style.css" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp57740/domains/werkjewel.nl/public_html/application/views/pages/statistieken2.php" />
-    <entry file="file://$PROJECT_DIR$/johnny.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="53" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="47" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -468,8 +452,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piezo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="306">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/johnny.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="47" column="53" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="47" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
           <folding />
         </state>
       </provider>
