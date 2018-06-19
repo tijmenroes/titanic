@@ -37,8 +37,13 @@
 
         }
         var thunderaudio = new Audio('img/thunder_crack.mp3');
+     //   var oceanAudio = new Audio('img/ocean.mp3');
 
         var pageNr = 1;//set page nr op 1, je begint altijd op 1 namelijk.
+        $('html,body').animate({
+                scrollTop: $("#page1").offset().top
+            },
+            'fast');
         $(".morsetext").focus(); //highlight de textbox
 
 
@@ -49,11 +54,11 @@
         $("#click2").on("click", function() {
 
             pageNr = 2;
-            console.log(pageNr);
+
         });
         $("#click3").on("click", function() {
             pageNr = 3;
-            thunderaudio.play();
+
         });
         $("#click4").on("click", function() {
             pageNr = 4;
@@ -65,19 +70,54 @@
                 pageNr = pageNr + 1;
             }
         });
+        //wat er moet gebeuren wanneer de site laad.
+       // oceanAudio.play();
+        $("li").css("background", "#3d7885");
+        $("#click1").css("background", "#22454d");
+        console.log("1");
+        $(".morsegroup").hide();
+        scroll("#page1");
+      //  oceanAudio.play();
+        $(".boat").css("right", "10px");
 $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis daarvan ga je naar de juiste pagina.
+    
     switch (pageNr) {
         case 1:
+            $(".verhaal").slideDown(700);
+            $(".morsegroup").fadeOut(200);
+            $("li").css("background", "#3d7885");
+            $("#click1").css("background", "#22454d");
+            $(".waves").css("filter", "brightness(100%)");
             console.log("1");
            scroll("#page1");
+          // oceanAudio.play();
+            $(".boat").css("right", "10px");
             break;
         case 2:
-            scroll("#page2");
+            $(".verhaal").slideUp(700);
+            $("li").css("background", "#3d7885");
+            $("#click2").css("background", "#22454d");
+            $(".morsegroup").fadeIn(1000);
+            //scroll("#page2");
+            scroll("#page1");
+            $(".boat").css("right", "100px");
             break;
         case 3:
-            scroll("#page3");
+            $("li").css("background", "#3d7885");
+            $("#click3").css("background", "#22454d");
+            scroll("#page2");
+            //animaties
+          //  $(".flash").css("opacity", "1");
+            $(".waves").css("filter", "brightness(50%)");
+            $(".boat").css("right", "500px");
+            //muziek
+            thunderaudio.play();
+            oceanAudio.stop();
+
             break;
         case 4:
+            $("li").css("background", "#3d7885");
+            $("#click4").css("background", "#22454d");
             scroll("#page4");
             break;
         default:
@@ -86,50 +126,122 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
     }
 });
 
-        window.setInterval(function () {
+       /* window.setInterval(function () { //timer voor de arrow,
+            // arrow fade in, gaat omlaag, fade out en word ge reset.
+            console.log( $('.arrowmove').css("top"));
             $('.arrowmove').fadeIn(500);
             $('.arrowmove').animate({top: "94.5%"}, 1500);
             $('.arrowmove').fadeOut(500);
             $('.arrowmove').animate({top: "90%"}, 0);
-        }, 1000);
-
+        }, 1000); // deze loop wordt om de zoveel miliseconden uitgevoerd.
+*/
     });
 </script>
-<div class="page" id="page1" style="background-image:url(img/kutgifbro.gif); background-size: 100% 100%;">
-
+<div class="page" id="page1">
     <div class="morsegroup">
         <div class="morseuitleg">
-        <p>Try it out, type your name here!</p>
+            <p>Try it out, type your name here!</p>
         </div>
-<input class="morsetext" type="text" id="tekstbalk" autocomplete="off" value="cuck">
-<button class="morsebutton">Send morse!</button>
-<div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 0; background-image: url('img/sunburst.jpg'); background-size: 100px 100px;; transition: .4s;"> lol</div>
-<br>
-<p id="morsecode"></p>
-<p id="demo"></p>
+        <input class="morsetext" type="text" id="tekstbalk" autocomplete="off" value="cuck">
+        <button class="morsebutton">Send morse!</button>
+        <div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 0; background-image: url('img/sunburst.jpg'); background-size: 100px 100px;; transition: .4s;"> lol</div>
+        <br>
+        <p id="morsecode"></p>
+        <p id="demo"></p>
+
     </div>
-
-
-
-    <img class="arrowmove klik" src="img/arrowlol.png">
-</div>
-<div class="page" id="page2">
     <div class="verhaal">
         <h1>Titanic</h1>
         <p>Toen de Titanic weg aan het varen was, was de sfeer erg goed op de boot. De bemanning was toch blij dat het wegvaren uiteindelijk gelukt was. De zon scheen,
             de vogels fluiten en je hoorde de golven klotsen tegen de boot. De passagiers zaten te genieten bij het zwembad, de bar of gewoon op hun kamer even uit te rusten.
-            Over ongeveer 1.5 maand zouden ze het drukke New York bereiken. Velen waren op pad naar New York voor zaken maar ook velen natuurlijk voor vakantie of gewoonweg voor de cruise reis. <br>
+            Over ongeveer 1.5 maand zouden ze het bruisende New York bereiken. Velen waren op pad naar New York voor zaken maar ook velen natuurlijk voor vakantie of gewoonweg voor de cruise reis.
+            Het was natuurlijk erg speciaal om een tochtje te maken met "het onzinkbare schip".<br> <br>
             De marconisten (morsecode operators) verstuurden grappend berichten naar andere boten, zo gingen de morse berichten over het uitlachen van straattaal van elkaar met lichte beledigingen.
-            De passagiers die het geld ervoor hadden mochten morsecode sturen naar huis, zo stuurden ze dingen zoals “Alles is goed, ik ben niet zeeziek”. </p>
+            De passagiers die het geld ervoor over hadden mochten morsecode sturen naar huis, zo stuurden ze dingen zoals “Alles is goed, ik ben niet zeeziek”. </p>
     </div>
-</div>
-<div class="page" id="page3">
+      <img class="arrowmove klik" src="img/arrowlol.png">
+    <img src="img/voorwaves.png" class="waves">
+    <img src="img/achterwaves.png" class="waves" id="achterwave">
+    <img src="img/clouds.png" class="upperimg" id="cloud">
+    <img src="img/sun.png" class="upperimg" id="sun">
+    <img src="img/boat.png" class="boat">
+    <img src="img/bg1.png" class="bg">
+    </div>
 
 
+
+
+
+
+<div class="page" id="page2">
+
+
+   <!-- <img class="arrowmove klik" src="img/arrowlol.png">-->
+   <!-- <div class="flash"></div>-->
+    <img src="img/donkercloud.png" class="upperimg2">
+   <!-- <section id="rain" class="rain"></section>-->
+
+    <img src="img/darkbg.jpg" class="bg" id="bg2">
 </div>
 <div class="page" id="page4">
+    <div class="verhaal p2">
+        <h1>Titanic</h1>
+        <p>Toen de Titanic weg aan het varen was, was de sfeer erg goed op de boot. De bemanning was toch blij dat het wegvaren uiteindelijk gelukt was. De zon scheen,
+            de vogels fluiten en je hoorde de golven klotsen tegen de boot. De passagiers zaten te genieten bij het zwembad, de bar of gewoon op hun kamer even uit te rusten.
+            Over ongeveer 1.5 maand zouden ze het bruisende New York bereiken. Velen waren op pad naar New York voor zaken maar ook velen natuurlijk voor vakantie of gewoonweg voor de cruise reis.
+            Het was natuurlijk erg speciaal om een tochtje te maken met "het onzinkbare schip".<br> <br>
+            De marconisten (morsecode operators) verstuurden grappend berichten naar andere boten, zo gingen de morse berichten over het uitlachen van straattaal van elkaar met lichte beledigingen.
+            De passagiers die het geld ervoor over hadden mochten morsecode sturen naar huis, zo stuurden ze dingen zoals “Alles is goed, ik ben niet zeeziek”. </p>
+    </div>
 
 </div>
+<style>
+
+#rain {
+    position: absolute;
+    top:220%;
+    z-index: -1;
+}
+    .drop {
+        /*
+        background:-webkit-gradient(linear, 0% 0%, 0%, 100%, from(rgba(13,52,58,1)), to (rgba(255,255,255,0.6)));
+        background:-moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,0.6) 100%);
+        */
+        background: #FFFFFF;
+        width: 1px;
+        height: 89px;
+        position: absolute;
+        top: 200%;
+        -webkit-animation: fall .63s linear infinite;
+        -moz-animation: fall .63s linear infinite;
+    }
+
+    @-webkit-keyframes fall { to {margin-top: 400px;}}
+    @-moz-keyframes fall { to {margin-top: 400px;}}
+
+</style>
+
+<script>
+    var nbDrop = 800;
+
+    function randRange(maxNum, minNum) {
+        return (Math.floor(Math.random(10) * (maxNum - minNum + 1)) + minNum);
+    }
+
+    function createRain() {
+        for (i = 0; i < nbDrop; i++) {
+
+            var dropLeft = randRange(0, 3000);
+            var dropTop = randRange(-1000, 1000);
+            $('.rain').append('<div class="drop" id="drop'+ i +'"></div>');
+            $('#drop' + i).css('left', dropLeft);
+            $('#drop' + i).css('top', dropTop);
+        }
+    }
+</script>
+</head>
+<body onload="createRain()">
+
 
 <script>
     //Zet een variable met 2 arrays, 1 zijn de morsecodes, tweede zijn de letters op de zelfde plek die bij de morse horen.
