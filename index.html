@@ -33,7 +33,14 @@
             $('html,body').animate({
                     scrollTop: $(page).offset().top
                 },
-                'slow');
+                600);
+
+        }
+        function Reset() {
+            $(".upperimg2").hide();
+            $(".p2").hide();
+            $(".morsegroup").hide();
+            $(".verhaal").hide();
 
         }
         var thunderaudio = new Audio('img/thunder_crack.mp3');
@@ -70,17 +77,18 @@
                 pageNr = pageNr + 1;
             }
         });
+        Reset();
         //wat er moet gebeuren wanneer de site laad.
        // oceanAudio.play();
         $("li").css("background", "#3d7885");
         $("#click1").css("background", "#22454d");
         console.log("1");
-        $(".morsegroup").hide();
+        $(".verhaal").slideDown(700);
         scroll("#page1");
       //  oceanAudio.play();
         $(".boat").css("right", "10px");
 $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis daarvan ga je naar de juiste pagina.
-    
+
     switch (pageNr) {
         case 1:
             $(".verhaal").slideDown(700);
@@ -95,6 +103,8 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             break;
         case 2:
             $(".verhaal").slideUp(700);
+            Reset();
+
             $("li").css("background", "#3d7885");
             $("#click2").css("background", "#22454d");
             $(".morsegroup").fadeIn(1000);
@@ -106,10 +116,13 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             $("li").css("background", "#3d7885");
             $("#click3").css("background", "#22454d");
             scroll("#page2");
+
             //animaties
+            $(".upperimg2").fadeIn(900);
           //  $(".flash").css("opacity", "1");
             $(".waves").css("filter", "brightness(50%)");
             $(".boat").css("right", "500px");
+
             //muziek
             thunderaudio.play();
             oceanAudio.stop();
@@ -118,7 +131,7 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
         case 4:
             $("li").css("background", "#3d7885");
             $("#click4").css("background", "#22454d");
-            scroll("#page4");
+            scroll("#page2");
             break;
         default:
             console.log("lol");
@@ -138,6 +151,7 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
     });
 </script>
 <div class="page" id="page1">
+
     <div class="morsegroup">
         <div class="morseuitleg">
             <p>Try it out, type your name here!</p>
@@ -150,6 +164,7 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
         <p id="demo"></p>
 
     </div>
+
     <div class="verhaal">
         <h1>Titanic</h1>
         <p>Toen de Titanic weg aan het varen was, was de sfeer erg goed op de boot. De bemanning was toch blij dat het wegvaren uiteindelijk gelukt was. De zon scheen,
@@ -158,6 +173,7 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             Het was natuurlijk erg speciaal om een tochtje te maken met "het onzinkbare schip".<br> <br>
             De marconisten (morsecode operators) verstuurden grappend berichten naar andere boten, zo gingen de morse berichten over het uitlachen van straattaal van elkaar met lichte beledigingen.
             De passagiers die het geld ervoor over hadden mochten morsecode sturen naar huis, zo stuurden ze dingen zoals “Alles is goed, ik ben niet zeeziek”. </p>
+
     </div>
       <img class="arrowmove klik" src="img/arrowlol.png">
     <img src="img/voorwaves.png" class="waves">
@@ -175,15 +191,6 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
 
 <div class="page" id="page2">
 
-
-   <!-- <img class="arrowmove klik" src="img/arrowlol.png">-->
-   <!-- <div class="flash"></div>-->
-    <img src="img/donkercloud.png" class="upperimg2">
-   <!-- <section id="rain" class="rain"></section>-->
-
-    <img src="img/darkbg.jpg" class="bg" id="bg2">
-</div>
-<div class="page" id="page4">
     <div class="verhaal p2">
         <h1>Titanic</h1>
         <p>Toen de Titanic weg aan het varen was, was de sfeer erg goed op de boot. De bemanning was toch blij dat het wegvaren uiteindelijk gelukt was. De zon scheen,
@@ -193,6 +200,30 @@ $(".klik").on("click", function() {// kijk welke het pagenr het is en op basis d
             De marconisten (morsecode operators) verstuurden grappend berichten naar andere boten, zo gingen de morse berichten over het uitlachen van straattaal van elkaar met lichte beledigingen.
             De passagiers die het geld ervoor over hadden mochten morsecode sturen naar huis, zo stuurden ze dingen zoals “Alles is goed, ik ben niet zeeziek”. </p>
     </div>
+
+    <div class="morsegroup">
+        <div class="morseuitleg">
+            <p>Try it out, type your name here!</p>
+        </div>
+        <input class="morsetext" type="text" id="tekstbalk" autocomplete="off" value="cuck">
+        <button class="morsebutton">Send morse!</button>
+        <div class="lol" style="width: 100px; height: 100px; background-color: red; opacity: 0; background-image: url('img/sunburst.jpg'); background-size: 100px 100px;; transition: .4s;"> lol</div>
+        <br>
+        <p id="morsecode"></p>
+        <p id="demo"></p>
+
+    </div>
+   <!-- <img class="arrowmove klik" src="img/arrowlol.png">-->
+   <!-- <div class="flash"></div>-->
+    <img src="img/donkercloud.png" class="upperimg2">
+   <!-- <section id="rain" class="rain"></section>-->
+
+    <img src="img/darkbg.jpg" class="bg" id="bg2">
+</div>
+<div class="page" id="page4">
+
+
+
 
 </div>
 <style>

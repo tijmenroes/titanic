@@ -96,7 +96,7 @@ position: relative;
       margin-left: 3%;
       margin-top: 0%;
       position: absolute;
-      height: 38%;
+      height: 85px;
       display: inline-block;
       -webkit-border-radius: 3px;
       border-radius: 3px;
@@ -139,6 +139,7 @@ position: relative;
 }
 .p2 {
     top:139%;
+    color: white;
 }
 #bg2 {
     top: 100%;
@@ -159,6 +160,9 @@ position: relative;
   }
   #achterwave {
       z-index: -10;
+  }
+  .morseuitleg {
+      font-size: 20px;
   }
   .morsetext {
       width: 40%;
