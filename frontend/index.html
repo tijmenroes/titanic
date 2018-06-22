@@ -1,0 +1,441 @@
+
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+<div class="nav">
+    <ul class="klik">
+        <li class="lijst" id="click1">
+            1
+        </li>
+        <li class="lijst" id="click2">
+            2
+        </li>
+        <li class="lijst" id="click3">
+            3
+        </li>
+        <li class="lijst" id="click4">
+            4
+        </li>
+    </ul>
+</div>
+<script>
+    $( document ).ready(function() {
+        function scroll(page) { //Functie waarbij je page alleen hoeft te veranderen in het id van de div, daarna zal die scrollen naar de div
+            $('html,body').animate({
+                    scrollTop: $(page).offset().top
+                },
+                600);
+
+        }
+        function Reset() {
+            $(".upperimg2").hide();
+            $(".p2").hide();
+            $(".morsegroup").hide();
+            $(".verhaal").hide();
+
+        }
+        var thunderaudio = new Audio('img/thunder_crack.mp3');
+        var oceanAudio = new Audio('img/ocean.mp3');
+        var rainAudio = new Audio('img/rainsound.mp3');
+
+        var pageNr = 1;//set page nr op 1, je begint altijd op 1 namelijk.
+        $('html,body').animate({
+                scrollTop: $("#page1").offset().top
+            },
+            'fast');
+        $(".morsetext").focus(); //highlight de textbox
+
+
+        $("#click1").on("click", function() {
+
+      pageNr = 1;
+        });
+        $("#click2").on("click", function() {
+
+            pageNr = 2;
+
+        });
+        $("#click3").on("click", function() {
+            pageNr = 3;
+
+        });
+        $("#click4").on("click", function() {
+            pageNr = 4;
+        });
+        $('.arrowmove').on("click", function() {
+            if(pageNr == 4){//laatste waarde, hoeft dus niks mee te gebeuren
+
+            } else {
+                pageNr = pageNr + 1;
+            }
+        });
+        Reset();
+        //wat er moet gebeuren wanneer de site laad.
+        oceanAudio.play();
+
+        $("li").css("background", "#3d7885");
+        $("#click1").css("background", "#22454d");
+        console.log("1");
+        $(".verhaal").slideDown(700);
+        scroll("#page1");
+        oceanAudio.play();
+        $(".boat").css("right", "10px");
+        createRain();
+        $("#rain").hide();
+$(".klik").on("click", function() {// kijk welke het pagenr het is en op basis daarvan ga je naar de juiste pagina.
+
+    switch (pageNr) {
+        case 1:
+            $("#rain").hide();
+            $(".verhaal").slideDown(700);
+            $(".morsegroup").fadeOut(200);
+            $("li").css("background", "#3d7885");
+            $("#click1").css("background", "#22454d");
+            $(".waves").css("filter", "brightness(100%)");
+            console.log("1");
+           scroll("#page1");
+           oceanAudio.play();
+            rainAudio.pause();
+            $(".boat").css("right", "10px");
+            break;
+        case 2:
+            $(".verhaal").slideUp(700);
+            $("#rain").hide();
+            $(".waves").css("filter", "brightness(100%)");
+            $("li").css("background", "#3d7885");
+            $("#click2").css("background", "#22454d");
+            $(".morsegroup").fadeIn(1000);
+            //scroll("#page2");
+            scroll("#page1");
+            oceanAudio.play();
+            rainAudio.pause();
+            $(".boat").css("right", "230px");
+            break;
+        case 3:
+            $("li").css("background", "#3d7885");
+            $("#click3").css("background", "#22454d");
+            scroll("#page2");
+
+            //animaties
+            $("#rain").show();
+            $(".upperimg2").fadeIn(900);
+          //  $(".flash").css("opacity", "1");
+            $(".waves").css("filter", "brightness(50%)");
+            $(".boat").css("right", "500px");
+            $(".morsegroup").fadeOut(200);
+            $(".p2").fadeIn(700);
+
+            //muziek
+            thunderaudio.play();
+            oceanAudio.pause();
+            rainAudio.play();
+
+            break;
+        case 4:
+            $("li").css("background", "#3d7885");
+            $("#click4").css("background", "#22454d");
+            scroll("#page2");
+            $(".verhaal").slideUp(700);
+            $("#morse2").fadeIn(1000);
+            $(".boat").css("right", "800px");
+            $(".lol").css("right", "980px");
+            $(".morsecode").html("");
+            $("#rain").show();
+            //muziek
+
+            oceanAudio.stop();
+            rainAudio.play();
+             break;
+        default:
+            console.log("lol");
+            break;
+    }
+});
+
+       /* window.setInterval(function () { //timer voor de arrow,
+            // arrow fade in, gaat omlaag, fade out en word ge reset.
+            console.log( $('.arrowmove').css("top"));
+            $('.arrowmove').fadeIn(500);
+            $('.arrowmove').animate({top: "94.5%"}, 1500);
+            $('.arrowmove').fadeOut(500);
+            $('.arrowmove').animate({top: "90%"}, 0);
+        }, 1000); // deze loop wordt om de zoveel miliseconden uitgevoerd.
+*/
+    });
+</script>
+<div class="page" id="page1">
+
+    <div class="morsegroup" id="morse1">
+        <div class="morseuitleg">
+            <p>Try it out, type your name here!</p>
+        </div>
+        <input class="morsetext" type="text" id="tekstbalk" autocomplete="off" value="Name">
+        <button class="morsebutton" id="button1">Send morse!</button>
+        <div class="lol" ></div>
+        <br>
+        <p class="morsecode"></p>
+        <p id="demo"></p>
+
+    </div>
+
+    <div class="verhaal p1">
+        <h1>Titanic</h1>
+        <p>Toen de Titanic weg aan het varen was, was de sfeer erg goed op de boot. De bemanning was toch blij dat het wegvaren uiteindelijk gelukt was. De zon scheen,
+            de vogels fluiten en je hoorde de golven klotsen tegen de boot. De passagiers zaten te genieten bij het zwembad, de bar of gewoon op hun kamer even uit te rusten.
+            Over anderhalve maand zouden ze het bruisende New York bereiken. Velen waren op pad naar New York voor zaken maar ook velen natuurlijk voor vakantie of gewoonweg voor de cruise reis.
+            Het was natuurlijk erg speciaal om een tochtje te maken met "het onzinkbare schip".<br> <br>
+            De marconisten (morsecode operators) verstuurden grappend berichten naar andere boten, zo gingen de morse berichten over het uitlachen van straattaal van elkaar met lichte beledigingen.
+            De passagiers die het geld ervoor over hadden mochten morsecode sturen naar huis, zo stuurden ze dingen zoals “Alles is goed, ik ben niet zeeziek”. </p>
+
+    </div>
+      <img class="arrowmove klik" src="img/arrowlol.png">
+    <img src="img/voorwaves.png" class="waves">
+    <img src="img/achterwaves.png" class="waves" id="achterwave">
+    <img src="img/clouds.png" class="upperimg" id="cloud">
+    <img src="img/sun.png" class="upperimg" id="sun">
+    <img src="img/boat.png" class="boat">
+    <img src="img/bg1.png" class="bg">
+    </div>
+
+
+<div class="page" id="page2">
+
+    <div class="verhaal p2">
+        <h1>Titanic</h1>
+        <p>4 dagen later diep in de nacht, was de sfeer heel anders. Er was onrust tussen de bemanning, er was namelijk een heel grote ijsberg waar ze recht op af voeren. De temperatuur was onder het vriespunt, het regende
+            en er waren harde windstoten. Kortom, de blije sfeer van een paar dagen geleden was geheel weg. Uiteindelijk was het wel duidelijk voor iedereen, er was iets aan de hand. Het duurde niet lang voordat ook de passagiers
+            op de hoogte waren dat ze zouden botsen.<br><br>
+            In de marconisten kamer was de spanning aan te voelen, zij hadden nu de belangrijke taak om andere schepen in te lichten en eventueel om hulp te vragen. Zo werd al snel <b>“CQD”</b>
+            verstuurd, dit was het toentertijd algemene noodsignaal voor schepen. Ze besloten ook om het pas geïntroduceerde <b>“SOS”</b> te versturen. Het was duidelijk dat de frustratie er goed in zat, een schip die 300 km verderop
+            was probeerde informatie
+            te verkrijgen maar als antwoord kreeg het schip “Stelletje dwazen, laat ons met rust! Waar denken jullie mee bezig te zijn?” te horen. </p>
+    </div>
+
+    <div class="morsegroup" id="morse2">
+        <div class="morseuitleg">
+            <p>Save the titanic!</p>
+        </div>
+        <input class="morsetext" type="text" id="tekstbalk2" autocomplete="off">
+        <button class="morsebutton" id="button2">Send morse!</button>
+        <div class="lol"> </div>
+        <br>
+        <p class="morsecode"></p>
+        <p id="demo"></p>
+
+    </div>
+   <img class="arrowmove klik" src="img/arrowlol.png" id="arrow2">
+   <!-- <div class="flash"></div>-->
+    <img src="img/donkercloud.png" class="upperimg2">
+
+    <section id="rain" class="rain"></section>
+    <img src="img/iceberg.png" class="iceberg">
+    <img src="img/darkbg.jpg" class="bg" id="bg2">
+</div>
+<div class="page" id="page4">
+
+
+</div>
+
+<script>
+    var nbDrop = 600; //aantal keer dat de loop word uitgevoerd, oftewel aantal drops.
+
+    function randRange(maxNum, minNum) {//functie voor een random range
+        return (Math.floor(Math.random(10) * (maxNum - minNum + 1)) + minNum); //Return een afgerond random nummer met de parameters die hieronder worden geset
+
+    }
+
+    function createRain() {
+        for (i = 0; i < nbDrop; i++) {
+
+            var dropLeft = randRange(0, 1700);
+            var dropTop = randRange(-1000, 1400);
+            $('.rain').append('<div class="drop" id="drop'+ i +'"></div>');
+            $('#drop' + i).css('left', dropLeft);
+            $('#drop' + i).css('top', dropTop);
+        }
+    }
+</script>
+
+
+
+
+<script>
+    //Zet een variable met 2 arrays, 1 zijn de morsecodes, tweede zijn de letters op de zelfde plek die bij de morse horen.
+    var patternMap = {
+        "morse":[
+            ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---","-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-",
+            "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", " "],
+        "letters": [
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3"
+            , "4", "5", "6", "7", "8", "9", "0", " "]};
+
+
+     var socket = io(); //haal socket op
+
+    $('button').on("click", function(){ //wanneer button geclicked word
+        $(".morsecode").html("sending...");
+        var poep = [];//set de var hier zodat hij elke buttonclick ook weer leeg gemaakt word
+
+        var text = document.getElementById('tekstbalk').value; // lees de value af van tekstbalk
+        if(text == ""){
+            console.log("lHAAAAAAAAAAAAAAAAAAAAA");
+            text = document.getElementById('tekstbalk2').value; // lees de value af van tekstbalk
+        }
+
+        text = text.toUpperCase(); //zet om in hoofdletters.
+        var letters = /^[A-Za-z\s]+$/; //variabele met letters, hoofdletters en spaties
+
+        if(text.indexOf("SOS") > -1 || text.indexOf("CQD") > -1 || text.indexOf("HELP") > -1){ //Als het woord sos in de string zit zal er iets gebeuren.
+            alert("Lekker bezig hoor");
+        }
+        if(text.match(letters)) { //kijk of er alleen letters en spaties in de var text zitten
+            if (typeof buttonbusy !== 'undefined') { //kijk of de variable al ge set is.
+                alert("Wacht totdat de morse klaar is!");
+            }
+            buttonbusy = 1;
+            console.log(buttonbusy);
+
+            var time = 1; //1 morse time fragment, denk aan een dot
+            var short = time * 3; //streepje in morse
+            var long = time * 7;//een spatie in morse
+
+            var split = Array.from(text); //maak een array van de var text
+
+
+            console.log(split);
+            for(i=0; i < text.length; i++) {
+                //voer het zovaak uit als dat de array groot is
+                var lees = split[i]; //kijk per letter
+
+                console.log(lees);
+                var a = patternMap.letters.indexOf(lees); //kijk welke positie de bepaalde letter heeft in de array
+
+                var input = patternMap.morse[a];
+                poep.push(input); //stop de morse voor de bijbehordende letter in de array
+
+            }
+
+            var morseMix = poep.join(""); //zet het om naar een string
+
+            $(".morsecode").html(morseMix); //pomp het in de html
+            var fullMorse = [];
+
+            var row = {};
+
+            row.on = false;
+            row.val = time;
+            fullMorse.push(row);
+            for(z=0; z < morseMix.length; z++) { //for loop die de morsemix afgaat en kijkt of het een punt, streepje of spatie is.
+
+                if(morseMix[z] == "." || morseMix[z] == " ") {
+                    row.on = true;
+                    row.val = time;
+                    fullMorse.push(row);
+                    row = {};
+
+                } else if(morseMix[z] == "-") {
+                    row.on = true;
+                    row.val = short;
+                    fullMorse.push(row);
+                    row = {};
+
+                } else if (morseMix[z] == " ") {
+                    row.on = false;
+                    row.val = short;
+                    fullMorse.push(row);
+                    row = {};
+                }
+                else {
+                    console.log('geen van beide');
+                }
+
+                if(morseMix[z +1] == "." || morseMix[z +1] == "-"){ //kijk wat de letter erna is.
+                    row.on = false;
+                    row.val = time;
+                    fullMorse.push(row);
+                    row = {};
+                } else if(morseMix[z +1] == " ") { //anders is het een spatie
+                    row.on = false;
+                    row.val = long;
+                    fullMorse.push(row);
+                    row = {};
+                }
+                else { //undefined of niks, doe niks.
+                    console.log("tis voorbij man");
+                }
+
+            }
+            row.on = false;
+            row.val = time;
+            fullMorse.push(row);
+            row.on = false;
+            row.val = time;
+            fullMorse.push(row);
+            row.on = false;
+            row.val = time;
+            fullMorse.push(row);
+
+            var d = 1;
+          //  var haha ="";
+            function myLoop () {           //  create a loop function
+
+
+                var counter = fullMorse[d-1].val * 1000; //zet een
+                console.log(counter);
+                setTimeout(function () {    //setTimeout zodat er een delay zit wanneer de loop opnieuw word uitgevoerd.
+
+
+
+                  //  console.log(counter);
+                    //  haha = fullMorse[d].on + ": " + fullMorse[d].val; //laat zien op de page
+                  //  document.getElementById("demo").innerHTML = haha;
+                    console.log(fullMorse[d]);
+                    if (fullMorse[d].on === true) { //wanneer on true als waarde heeft
+                        socket.emit('chat message', "on"); //stuur het in de socket
+                        $('.lol').css("opacity", "1"); //lichtje gaat aan
+
+
+                    } else {
+                        socket.emit('chat message', "off"); //stuur het in de socket
+                        $('.lol').css("opacity", "0"); //lichtje gaat uit.
+
+                    }
+
+                    d++; //+1
+
+
+                    if (d < fullMorse.length -1  ) {            //  als d nog niet klaar is, start de loop weer.
+                        myLoop();
+                    }
+
+                }, counter);
+                                // counter + 1
+            }
+
+            myLoop();                      //start de loop
+
+            console.log(fullMorse);
+
+        } else { //als je rare tekens gebruikt zal er niks gebeuren. Helaas!
+           // alert("Je hebt rare tekens gebruikt!");
+        }
+
+        return false;
+
+    });
+
+
+
+
+</script>
+</body>
+</html>

@@ -16,43 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/frontend/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="85" column="37" lean-forward="false" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="164" column="22" lean-forward="false" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conceptueel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/scp20197/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="924" column="114" lean-forward="false" selection-start-line="924" selection-start-column="114" selection-end-line="924" selection-end-column="114" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="johnny.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/johnny.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="47" column="53" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="47" selection-end-column="53" />
+            <state relative-caret-position="203">
+              <caret line="386" column="21" lean-forward="false" selection-start-line="386" selection-start-column="21" selection-end-line="386" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -61,28 +28,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+            <state relative-caret-position="561">
+              <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thomas.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thomas.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="piezo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/piezo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="4114">
+              <caret line="242" column="47" lean-forward="false" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -99,36 +56,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>navbar</find>
-      <find>usertest</find>
-      <find>var led</find>
-      <find>40</find>
-      <find>studenten aanwezig</find>
-      <find>kijk</find>
-      <find>items</find>
-      <find>arrow</find>
-      <find>graph</find>
-      <find>circle</find>
-      <find>chart</find>
-      <find>socket</find>
-      <find>express</find>
-      <find>wave</find>
-      <find>waves</find>
-      <find>boat</find>
-      <find>verhaa</find>
-      <find>morse</find>
-      <find>li</find>
-      <find>arrowmove</find>
-      <find>morsegroup</find>
-      <find>morsebutton</find>
-      <find>morsegro</find>
-      <find>page</find>
-      <find>bg</find>
-      <find>flash</find>
-      <find>verhaal</find>
-      <find>p2</find>
       <find>morsegr</find>
       <find>dark</find>
+      <find>upperimg2</find>
+      <find>waves</find>
+      <find>donker</find>
+      <find>upperimg</find>
+      <find>color:white</find>
+      <find>white</find>
+      <find>rain</find>
+      <find>verhaal</find>
+      <find>nav</find>
+      <find>in de marco</find>
+      <find>SOS</find>
+      <find>sunburst</find>
+      <find>sunbu</find>
+      <find>lol</find>
+      <find>cqd</find>
+      <find>boat</find>
+      <find>button</find>
+      <find>tekstbalk</find>
+      <find>arrow</find>
+      <find>arrowmove</find>
+      <find>text</find>
+      <find>1.5</find>
+      <find>.lol</find>
+      <find>morsecode</find>
+      <find>900px</find>
+      <find>.html</find>
+      <find>haha</find>
+      <find>--.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,18 +135,18 @@
         <option value="$PROJECT_DIR$/thomas.js" />
         <option value="$PROJECT_DIR$/johnny.js" />
         <option value="$PROJECT_DIR$/piezo.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp20197/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp42161/domains/i367471.iris.fhict.nl/public_html/lameco/jquerydomchange.php" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/frontend/style.css" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/frontend/index.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -219,8 +176,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,6 +187,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="arduino-morse-code" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arduino-morse-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arduino-morse-code" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,23 +309,25 @@
       <workItem from="1528835380693" duration="5191000" />
       <workItem from="1528881598469" duration="2111000" />
       <workItem from="1529055184289" duration="7176000" />
-      <workItem from="1529313292900" duration="27106000" />
+      <workItem from="1529313292900" duration="29513000" />
+      <workItem from="1529440820544" duration="6572000" />
+      <workItem from="1529485242279" duration="8524000" />
+      <workItem from="1529581706393" duration="3719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155116000" />
+    <option name="totallyTimeSpent" value="176338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14791666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.023758098" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -363,6 +336,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -380,8 +354,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp04346/domains/werkjewel.nl/public_html/assets/style/style.css" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp47233/domains/werkjewel.nl/public_html/application/views/pages/locationtest.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp14894/domains/i367471.iris.fhict.nl/public_html/s3portfolio/programmeren.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40893/domains/i367471.iris.fhict.nl/public_html/s3portfolio/includes/style.css" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40562/domains/i367471.iris.fhict.nl/public_html/s3portfolio/visie.php" />
@@ -427,70 +399,34 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp40485/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp06955/domains/werkjewel.nl/public_html/assets/style/style.css" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp57740/domains/werkjewel.nl/public_html/application/views/pages/statistieken2.php" />
-    <entry file="file://$PROJECT_DIR$/thomas.js">
+    <entry file="file://$PROJECT_DIR$/thomas.js" />
+    <entry file="file://$PROJECT_DIR$/piezo.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42161/domains/i367471.iris.fhict.nl/public_html/lameco/jquerydomchange.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp20197/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php" />
+    <entry file="file://$PROJECT_DIR$/johnny.js" />
+    <entry file="file://$PROJECT_DIR$/style.css" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/frontend/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/piezo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/johnny.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="47" column="53" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="47" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp20197/domains/i367471.iris.fhict.nl/public_html/s3portfolio/conceptueel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="924" column="114" lean-forward="false" selection-start-line="924" selection-start-column="114" selection-end-line="924" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="164" column="22" lean-forward="false" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
+        <state relative-caret-position="4114">
+          <caret line="242" column="47" lean-forward="false" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        <state relative-caret-position="561">
+          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42161/domains/i367471.iris.fhict.nl/public_html/lameco/jquerydomchange.php">
+    <entry file="file://$PROJECT_DIR$/frontend/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        <state relative-caret-position="203">
+          <caret line="386" column="21" lean-forward="false" selection-start-line="386" selection-start-column="21" selection-end-line="386" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="85" column="37" lean-forward="false" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -9,11 +9,7 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html');
-    app.use(express.static(__dirname + '/img'));
-
-});
+app.use('/', express.static('frontend'));
 
 io.on('connection', function(socket){ //als er een connectie gemaakt word
     console.log('a user connected');
@@ -53,8 +49,9 @@ board.on("ready", function() { //wanneer het board ready is
                  led.on();
                piezo.play({
                    song: [
-                       [ 698, 150 ] //Speel een frequentie af op de piezo, voor 150 beats (beats staat nu op 150 per min)
-                       ]
+                       [ 831, 9 ] //Speel een frequentie af op de piezo, voor 20 beats (beats staat nu op 150 per min)
+                       ] //hij staat op 9 beats, dit is namelijk 3+ seconden. De langste morse die word uitgezonden is een streepje en dat is 3 seconden. Mocht er iets fout gaan in de off message ontvangst
+                   //zal het geluid alsnog na zo'n 3.5 sec stoppen.
                });
            }
            else if (msg== "off"){ //wanneer de message off is
